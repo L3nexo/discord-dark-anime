@@ -1,35 +1,47 @@
-//META{"name":"Discord Theme - Dark Koi","description":"Darker Discord with some repositions and accents","author":"Venipa","version":"0.4.7-pre"}*//
+//META{"name":"Discord-Themes","description":"live import/fork by WhatDaPuck#2080","author":"Nix","forked version":"3.0"}*//{}
+@import url(https://gitcdn.xyz/repo/WhatDaPuck/NotAnotherAnimeTheme/master/css/NotAnotherAnimeThemeSCSL.css);
 
-/*
-* Name: Discord Theme - Dark Koi
-* Description: Darker Discord with some repositions and accents
-* Author: Venipa
-* Version: 0.4.7-pre,
-*/
+/*EDIT THIS TO CHANGE THE BACKGROUND, I RECOMMEND USING IMGUR TO HOST YOUR IMAGE*/
+[class~=app] {
+    background: url(https://pre00.deviantart.net/1ace/th/pre/f/2017/030/4/b/casual_d_va___youtube_process__by_knkl-daxc9y5.jpg) !important;
+    background-size: cover !important;
+}
 
-/*
-MIT License
+/*THIS CHANGES THE COLOR OF THE UNREAD NOTIFICATION*/
+.guilds-wrapper .guilds .guild.unread:not(.selected):before,
+.guild-channels .channel-text.unread:not(.selected):not(.channel-muted):before {
+    background: #E0FFFF;    /*change this to any hex code you want*/
+}
+/*THIS CHANGES THE COLOR OF THE SCROLLBAR*/
+[class~=scroller-wrap] [class~=scroller]::-webkit-scrollbar-thumb {
+    border-left-color: rgba(215, 0, 255, 0.9) !important;
+}
 
-Copyright (c) 2019 Venipa
+[class~=private-channels] [class~=channel]:hover a {
+    background-color: rgba(215, 0, 255, 0.9);
+}
+/*THIS CHANGES THE COLOR OF THE HOVER on the Guild Channels*/
+[class~=guilds-wrapper] [class~=guilds] [class~=guild] [class~=guild-inner]:hover {
+    background: #E0FFFF !important;
+}
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+[class~=guild-header] header {
+    color: #E0FFFF;
+}
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+/*EDIT THIS TO CHANGE THE FRIENDS ICON IMAGE, I WOULD RECOMMEND USING IMGUR TO HOST YOUR IMAGE*/
+[class~=guilds-wrapper] [class~=guilds] [class~=friends-icon] {
+    background-image: url(https://media.giphy.com/media/INfeOM4rsqBVe/giphy.gif)
+}
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
-*/
-
-@import url("https://rawcdn.githack.com/Venipa/discord-dark-anime/master/releases/core.theme.css");
+/*IF YOU DON'T WANT A CUSTOM FRIENDS ICON JUST REMOVE THIS BIT OF CODE*/
+[class~=guilds-wrapper] [class~=guilds] [class~=friends-icon] {
+    display: block;
+    width: 50px;
+    height: 50px;
+    content: '';
+    background-size: 142%;    /*how zoomed in or zoomed out your image is*/
+    background-repeat: no-repeat;
+    background-position: top left;    /*the positioning of your image in the icon, for example "top left" uses the top left of the image*/
+}
